@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# These two folders will be ignored
+/bin
+/build
