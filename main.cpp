@@ -3,6 +3,6 @@
 int main() {
     ImageProcess imgProc;
     imgProc.processImage();
-    
+
     return 0;
 }
