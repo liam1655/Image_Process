@@ -21,6 +21,28 @@ endif()
 # 变量和目录设置
 set(ImgAlgorithm_DIR ${CMAKE_SOURCE_DIR}/src/img_algorithm)
 set(ImgProcess_DIR ${CMAKE_SOURCE_DIR}/src/img_process)
+set(ShowResult_DIR ${CMAKE_SOURCE_DIR}/src/show_result)
+# set(OpenCV_DIR ${CMAKE_SOURCE_DIR}/../SDK/opencv/MinGW)
 
-# 添加子目录
-add_subdirectory(src)       # 该语句可以查找src目录下的CMakeLists.txt文件
+
+# set(OpenCV_INCLUDE_DIR "${OpenCV_DIR}/include")
+# set(OpenCV_LIBRARY_DIR "${OpenCV_DIR}/lib/x64")
+
+# include_directories(${OpenCV_INCLUDE_DIR})
+# link_directories(${OpenCV_LIBRARY_DIR})
+
+# set(OpenCV_LIBS
+#     opencv_core480
+#     opencv_imgproc480
+#     opencv_highgui480
+#     opencv_videoio480
+#     opencv_video480
+#     opencv_imgcodecs480
+#     opencv_ximgproc480
+# )
+
+# 加载 OpenCV 模块
+include(${PROJECT_SOURCE_DIR}/third_party/opencv.cmake)
+
+# 添加子目录，src文件夹下的CMakeLists.txt都可以使用该语句之前定义的变量
+add_subdirectory(src)      

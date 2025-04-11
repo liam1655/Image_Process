@@ -1,6 +1,6 @@
 project(img_proces)
 
-# 添加动态库
+# 生成动态库
 add_library(img_process SHARED img_process.cpp)
 
 # 添加动态库所需的包含目录
